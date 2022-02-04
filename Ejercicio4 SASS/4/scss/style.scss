@@ -1,0 +1,5 @@
+@for $num from 0 through 5 {
+    .texto#{$num} {
+        font-size: 1rem + (0.2rem * $num);
+    }
+}

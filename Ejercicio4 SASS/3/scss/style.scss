@@ -1,0 +1,23 @@
+$listaDivs: (
+    (1, blue),
+    (2, red),
+    (1.5, yellow)
+);
+
+@each $value in $listaDivs {
+    $width: nth($value, 1) * 100;
+    $color: nth($value, 2);
+    .flexible-#{$width}-#{"#{$color}"} {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        > div {
+            width: $width + px;
+            background-color: $color;
+            margin: 5px;
+            text-align: center;
+        }
+
+    }   
+}

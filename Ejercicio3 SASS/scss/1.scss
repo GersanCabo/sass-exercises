@@ -1,0 +1,12 @@
+section {
+    background-color: blue;
+    padding: 10px;
+    article {
+        background-color: lightblue;
+        margin: 5px;
+        padding: 5px;
+        &:hover {
+            background-color: yellow;
+        }
+    }
+}

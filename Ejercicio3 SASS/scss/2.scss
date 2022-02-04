@@ -1,0 +1,14 @@
+$color: blue;
+
+section {
+    background-color: $color;
+    padding: 10px;
+    article {
+        background-color: lighten($color, 30%);
+        margin: 5px;
+        padding: 5px;
+        &:hover {
+            background-color: invert($color);
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@mixin styleFast($nameClass, $textColor, $width, $reductionPrc) {
+    $reductionPrc: calc($reductionPrc / 100);
+    @for $i from 1 through 6 {
+        #{"." + $nameClass} #{"h" + $i} {
+            color: darken($textColor, (5 * $i));
+            @if $i > 1 {
+                $width: $width * $reductionPrc;
+                width: $width;
+            } @else {
+                width: $width;
+            }
+        }
+    }
+}
+
+@include styleFast("miclase", #cc3366, 5rem, 80);
